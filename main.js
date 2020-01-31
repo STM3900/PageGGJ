@@ -42,7 +42,11 @@ var x = setInterval(function () {
     CountTime.innerHTML = hours + ":" +
         minutes + ":" + seconds;
 
-    if(hours <= 0){
+    if(hours >= 48){
+        CountTime.style.color = "rgb(150, 150, 150)";
+    }
+
+        if(hours <= 0){
         CountTime.style.color = "rgb(148, 24, 24)";
 
         if(minutes <= 30){
