@@ -95,7 +95,6 @@ section {
 .timer h3 {
     font-family: 'Cutive Mono', monospace;
     font-size: 130px;
-    font-weight: normal;
     margin: 0;
     letter-spacing: -25px;
     text-align: center;
@@ -134,6 +133,17 @@ section {
     overflow: auto;
     width: 80%;
     height: 75vh;
+}
+
+.twitter h1{
+    font-size: 25px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.twitter a{
+    color: rgb(194, 194, 194);
 }
 
 footer {
@@ -254,12 +264,12 @@ footer p {
     }
 
     .timer h3 {
-        font-size: 80px;
-        letter-spacing: -10px;
+        font-size: 110px;
+        letter-spacing: -20px;
     }
 
     .timer p {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .twitch {
