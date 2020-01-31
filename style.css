@@ -5,8 +5,8 @@ font-family: 'Cutive Mono', monospace;
 
 */
 
-body{
-    margin:0;
+body {
+    margin: 0;
     height: 100vh;
     background: #2c1e52;
     color: white;
@@ -18,7 +18,7 @@ body{
     align-content: center;
 }
 
-.header{
+.header {
     height: 15vh;
 
     display: flex;
@@ -26,10 +26,10 @@ body{
     align-items: center;
     justify-content: center;
     align-content: center;
-    
+
 }
 
-.logo{
+.logo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,50 +37,50 @@ body{
     align-content: center;
 }
 
-.logo img{
+.logo img {
     width: 20%;
 }
 
-.contAll{
+.contAll {
     display: flex;
     flex-direction: row;
     align-items: center;
     align-content: center;
-    justify-content: space-evenly;   
+    justify-content: space-evenly;
     width: 100%;
     height: 80vh;
 }
 
-section{
+section {
     display: flex;
     flex-direction: row;
     align-items: center;
     align-content: center;
-    justify-content: space-evenly;   
-    
+    justify-content: space-evenly;
+
     width: 100%;
     height: 80vh;
 }
 
-.cont1{
+.cont1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     align-content: center;
-    justify-content: space-evenly;   
+    justify-content: space-evenly;
     width: 55%;
     padding-left: 10%;
 }
 
-.timer{
+.timer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     align-content: center;
-    justify-content: space-evenly;   
+    justify-content: space-evenly;
 }
 
-.timer h2{
+.timer h2 {
     font-family: 'Cutive Mono', monospace;
     font-size: 35px;
     font-weight: normal;
@@ -88,7 +88,7 @@ section{
     margin: 0;
 }
 
-.timer h3{
+.timer h3 {
     font-family: 'Cutive Mono', monospace;
     font-size: 130px;
     font-weight: normal;
@@ -97,7 +97,7 @@ section{
     text-align: center;
 }
 
-.timer p{
+.timer p {
     font-family: 'Quicksand', sans-serif;
     font-size: 25px;
     font-weight: normal;
@@ -105,22 +105,22 @@ section{
     text-align: left;
 }
 
-.cont2{
+.cont2 {
     width: 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
-    justify-content: space-evenly;   
+    justify-content: space-evenly;
 }
 
-.twitter{
+.twitter {
     overflow: auto;
     width: 80%;
     height: 75vh;
 }
 
-footer{
+footer {
     background: #261947;
     color: white;
     margin-top: 0px;
@@ -129,126 +129,148 @@ footer{
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;
     width: 100%;
-  }
+}
 
-footer a:link{
+footer a:link {
     color: white;
 }
 
-  footer a:visited{
-    color :white;
+footer a:visited {
+    color: white;
 }
 
-footer a:hover{
+footer a:hover {
     animation-name: rainbow;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 
-footer p{
+footer p {
     padding-left: 10%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: #261947;
+    border-left: 1px solid #151515;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d6d6d6;
+    border-radius: 2px;
+    border-left: 2px solid #261947;
 }
 
 @keyframes rainbow {
     0% {
-      color: white;
+        color: white;
     }
+
     12% {
-      color: rgb(50, 75, 185);
+        color: rgb(50, 75, 185);
     }
+
     25% {
-      color: rgb(64, 192, 64);
+        color: rgb(64, 192, 64);
     }
+
     37% {
-      color: rgb(241, 241, 64);
+        color: rgb(241, 241, 64);
     }
+
     50% {
-      color: rgb(209, 42, 42);
+        color: rgb(209, 42, 42);
     }
+
     62% {
-      color: rgb(241, 241, 64);
+        color: rgb(241, 241, 64);
     }
+
     75% {
-      color: rgb(64, 192, 64);
+        color: rgb(64, 192, 64);
     }
+
     87% {
-      color: rgb(50, 75, 185);
+        color: rgb(50, 75, 185);
     }
-  }
+}
 
 @media screen and (max-width: 1400px) {
-    body{
+    body {
         height: unset;
     }
 
-    .cont1{
+    .cont1 {
         padding-left: 5%;
     }
-    
-    .timer h3{
+
+    .timer h3 {
         font-size: 110px;
     }
 
-    .twitch{
+    .twitch {
         width: 55vw;
     }
 }
 
 @media screen and (max-width: 650px) {
-    .contAll{
+    .contAll {
         flex-direction: column;
         height: unset;
     }
-    
-    section{
+
+    section {
         flex-direction: column;
         height: unset;
     }
-    
-    .cont1{
+
+    .cont1 {
         width: 100%;
         padding-left: 0%;
         margin-top: 10%;
     }
-    
-    .timer{
+
+    .timer {
         align-items: center;
         width: 100%;
     }
-    
-    .timer h3{
+
+    .timer h3 {
         font-size: 15vw;
         margin-right: 25px;
     }
-    
-    .timer p{
+
+    .timer p {
         font-size: 4vw;
     }
 
-    .twitch{
+    .twitch {
         width: 95%;
         margin-top: 5%;
         margin-bottom: 5%;
         margin-left: 10px;
     }
-    
-    .cont2{
+
+    .cont2 {
         width: 100%;
     }
-    
-    .twitter{
+
+    .twitter {
         width: 85%;
     }
 }
 
 @media screen and (max-width: 400px) {
-    .timer h3{
+    .timer h3 {
         letter-spacing: -10px;
-        margin-right: 10px; 
+        margin-right: 10px;
     }
 
-    footer p{
+    footer p {
         padding-left: 5%;
     }
 }
-
