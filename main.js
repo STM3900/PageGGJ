@@ -3,7 +3,15 @@ const TimeNow = document.querySelector('.timeNow');
 const CountTime = document.querySelector('.countTime');
 
 // Set the date we're counting down to
-var countDownDate = new Date("Feb 2, 2020 17:30:00").getTime();
+//var countDownDate = new Date("Feb 2, 2020 17:30:00").getTime();
+var countDownDate = new Date("Feb 02, 2020 17:30:00").getTime();
+
+function timeOut(){
+    CountTime.innerHTML = "TEMPS ÉCOULÉ !";
+    CountTime.classList.add("timerOut");
+    CountTime.classList.remove("clignotement");
+    CountTime.style.letterSpacing = "-3px";
+}
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -34,11 +42,33 @@ var x = setInterval(function () {
     CountTime.innerHTML = hours + ":" +
         minutes + ":" + seconds;
 
+    if(hours <= 0){
+        CountTime.style.color = "rgb(148, 24, 24)";
+
+        if(minutes <= 30){
+            CountTime.classList.add("clignotement");
+        }
+    
+        else if(minutes <= 15){
+            CountTime.style.animationDuration = "0.5s";
+        }
+    
+        else if(minutes <= 5){
+            CountTime.style.animationDuration = "0.3s";
+        }
+    
+        else if(minutes <= 0){
+            CountTime.style.animationDuration = "0.2s";
+        }
+    };
+
+
+
     // If the count down is over, write some text 
     if (distance < 0) {
         clearInterval(x);
-        CountTime.innerHTML = "EXPIRED";
-    }
+        timeOut()
+    };
 
     let now2 = new Date();
     TimeNow.innerHTML = now2.toLocaleTimeString();

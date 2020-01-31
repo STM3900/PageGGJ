@@ -19,13 +19,17 @@ body {
 }
 
 .header {
-    height: 15vh;
+    height: 12vh;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     align-content: center;
+
+    background: #261947;
+    width: 100%;
+    padding-bottom: 1%;
 
 }
 
@@ -38,7 +42,7 @@ body {
 }
 
 .logo img {
-    width: 20%;
+    width: 15%;
 }
 
 .contAll {
@@ -95,6 +99,12 @@ section {
     margin: 0;
     letter-spacing: -25px;
     text-align: center;
+    transition: 1s;
+}
+
+.timerOut{
+    transition: 1s;
+    color: rgb(209, 42, 42);
 }
 
 .timer p {
@@ -112,6 +122,12 @@ section {
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
+}
+
+.clignotement{
+    animation-name: clignotement;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
 .twitter {
@@ -165,6 +181,20 @@ footer p {
     border-left: 2px solid #261947;
 }
 
+@keyframes clignotement {
+    0% {
+        color: rgb(148, 24, 24);
+    }
+
+    50% {
+        color: rgb(218, 35, 35);
+    }
+
+    100% {
+        color: rgb(148, 24, 24);
+    }
+}
+
 @keyframes rainbow {
     0% {
         color: white;
@@ -199,25 +229,50 @@ footer p {
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1600px) {
     body {
-        height: unset;
+        height: 100vh;
+    }
+
+    .contAll {
+        width: 100%;
+        height: 78.3vh;
+    }
+    
+    section {
+        width: 100%;
+        height: 78.3vh;
     }
 
     .cont1 {
         padding-left: 5%;
+        height: 70vh;
+    }
+
+    .cont2 {
+        height: 70vh;
     }
 
     .timer h3 {
-        font-size: 110px;
+        font-size: 80px;
+        letter-spacing: -10px;
+    }
+
+    .timer p {
+        font-size: 20px;
     }
 
     .twitch {
         width: 55vw;
+        height: 310px;
     }
 }
 
 @media screen and (max-width: 650px) {
+    body{
+        height: unset;
+    }
+
     .contAll {
         flex-direction: column;
         height: unset;
@@ -226,6 +281,10 @@ footer p {
     section {
         flex-direction: column;
         height: unset;
+    }
+
+    .logo img {
+        width: 20%;
     }
 
     .cont1 {
@@ -261,6 +320,8 @@ footer p {
 
     .twitter {
         width: 85%;
+        margin-top: 20%;
+        margin-bottom: 5%;
     }
 }
 
